@@ -109,9 +109,13 @@ Es donde el centro de la información es un recurso en particular. Hay mucha inf
 Organizamos nuestros endpoints a partir de un recurso, digamos por ejemplo imágenes, y utilizando el método del protocolo HTTP hacemos las operaciones CRUD sobre ese recurso.
 
 GET http://go_rest_controller.com/imagenes
+
 GET http://go_rest_controller.com/imagenes/:id
+
 PUT http://go_rest_controller.com/imagenes/:id
+
 POST http://go_rest_controller.com/imagenes/:id
+
 DELETE http://go_rest_controller.com/imagenes/:id
 
 ### Use Case Centric
