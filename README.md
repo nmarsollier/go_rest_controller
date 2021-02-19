@@ -2,12 +2,6 @@
 
 Este repositorio plantea una forma simple y efectiva de organizar nuestros servicios REST en un entorno de microservicios.
 
-Esta es una serie de tutoriales sobre patrones simples de programación en GO.
-
-[Capítulo 1: Programación Funcional e Inversión de Control en GO](https://github.com/nmarsollier/go_di_ioc)
-
-[Capítulo 3: Router Design Pattern](https://github.com/nmarsollier/go_router_design)
-
 ## MVC en Microservicios
 
 Porque microservicios es algo diferente a un monolito ?
@@ -146,3 +140,11 @@ POST http://go_rest_controller.com/facturas/:id/enviar_correo
 POST http://go_rest_controller.com/facturas/:id/pagar
 
 POST http://go_rest_controller.com/facturas/:id/cancelar
+
+## Nota
+
+Esta es una serie de tutoriales sobre patrones simples de programación en GO.
+
+[Capítulo 1: Programación Funcional e Inversión de Control en GO](https://github.com/nmarsollier/go_di_ioc)
+
+[Capítulo 3: Router Design Pattern](https://github.com/nmarsollier/go_router_design)
