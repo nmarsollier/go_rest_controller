@@ -5,6 +5,7 @@ Este repositorio plantea una forma simple y efectiva de organizar nuestros servi
 Esta es una serie de tutoriales sobre patrones simples de programación en GO.
 
 [Capítulo 1: Programación Funcional e Inversión de Control en GO](https://github.com/nmarsollier/go_di_ioc)
+
 [Capítulo 3: Router Design Pattern](https://github.com/nmarsollier/go_router_design)
 
 ## MVC en Microservicios
@@ -127,12 +128,17 @@ Existen varias formas de hacerlo, una forma simple y efectiva, es :
  Ejemplo :
 
 GET http://go_rest_controller.com/facturas/resumen
+
 GET http://go_rest_controller.com/facturas/total_consolidado
 
 GET http://go_rest_controller.com/facturas/:id/recibo
+
 GET http://go_rest_controller.com/facturas/:id/detalles
+
 GET http://go_rest_controller.com/facturas/:id/total
 
 POST http://go_rest_controller.com/facturas/:id/enviar_correo
+
 POST http://go_rest_controller.com/facturas/:id/pagar
+
 POST http://go_rest_controller.com/facturas/:id/cancelar
