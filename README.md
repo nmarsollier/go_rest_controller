@@ -1,4 +1,4 @@
-# Capítulo 3: REST Controllers en go
+# REST Controllers en go
 
 Este repositorio plantea una forma simple y efectiva de organizar nuestros servicios REST en un entorno de microservicios.
 
