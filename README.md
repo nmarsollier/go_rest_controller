@@ -1,4 +1,4 @@
-# Capítulo 2: REST Controllers en go
+# Capítulo 3: REST Controllers en go
 
 Este repositorio plantea una forma simple y efectiva de organizar nuestros servicios REST en un entorno de microservicios.
 
@@ -143,8 +143,6 @@ POST http://go_rest_controller.com/facturas/:id/cancelar
 
 ## Nota
 
-Esta es una serie de tutoriales sobre patrones simples de programación en GO.
+Esta es una serie de notas sobre patrones simples de programación en GO.
 
-[Capítulo 1: Programación Funcional e Inversión de Control en GO](https://github.com/nmarsollier/go_di_ioc)
-
-[Capítulo 3: Router Design Pattern](https://github.com/nmarsollier/go_router_design)
+[Tabla de Contenidos](https://github.com/nmarsollier/go_index)
