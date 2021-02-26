@@ -2,29 +2,6 @@
 
 Este repositorio plantea una forma simple y efectiva de organizar nuestros servicios REST en un entorno de microservicios.
 
-## MVC en Microservicios
-
-Porque microservicios es algo diferente a un monolito ?
-
-- Un microservicio en general maneja un solo aspecto puntual de todo el modelo de negocio
-- Posee una interfaz mucho mas simple 
-- En general, la arquitectura de microservicios define como se deben comunicar los microservicios, y muchas veces se une el concepto de View y Controller, ya que nos enfocamos muy pocos protocolos de E/S. 
-- Si existen diferentes View, en general se manejan con diferentes microservicios Api Gateways.
-- No hay tanta segregación a implementar. 
-
-## El Controller
-
-El en enfoque clásico MVC, el Controller y View poseen las siguientes funciones: 
-
-- Interpreta un Request
-- Valida los datos de entrada
-- Adaptar el request a una solicitud del negocio
-- Llama al negocio
-- Adapta la respuesta del negocio de acuerdo al cliente
-- Maneja errores
-
-Y en general en los microservicios, conviene usar un framework especifico que resuelva cómodamente estos aspectos.
-
 ## RMR - Resource-Method-Representation
 
 RMR es una variante de MVC.
@@ -92,31 +69,46 @@ Este mismo concepto se puede adaptar y utilizar con cualquier protocolo como GRP
 - Desacopla las inicializacion de rutas, haciendo la definición de la misma algo sustentable y mantenible
 - Permite una lectura clara de los middlewares de cada controller
 
-## Notas finales sobre la definición del protocolo REST
+## Fundamentos
+
+### MVC en Microservicios
+
+Porque microservicios es algo diferente a un monolito ?
+
+- Un microservicio en general maneja un solo aspecto puntual de todo el modelo de negocio
+- Posee una interfaz mucho mas simple 
+- En general, la arquitectura de microservicios define como se deben comunicar los microservicios, y muchas veces se une el concepto de View y Controller, ya que nos enfocamos muy pocos protocolos de E/S. 
+- Si existen diferentes View, en general se manejan con diferentes microservicios Api Gateways.
+- No hay tanta segregación a implementar. 
+
+### El Controller
+
+El en enfoque clásico MVC, el Controller y View poseen las siguientes funciones: 
+
+- Interpreta un Request
+- Valida los datos de entrada
+- Adaptar el request a una solicitud del negocio
+- Llama al negocio
+- Adapta la respuesta del negocio de acuerdo al cliente
+- Maneja errores
+
+Y en general en los microservicios, conviene usar un framework especifico que resuelva cómodamente estos aspectos.
+
+### Notas finales sobre la definición del protocolo REST
 
 No voy a entrar en detalles de como debería ser un protocolo REST, sino mas bien una simple introducción. En general podemos organizar nuestros repositorios de dos formas :
 
-### Resource Centric
+#### Resource Centric
 
 Es donde el centro de la información es un recurso en particular. Hay mucha información, se le llama [RestFul](https://en.wikipedia.org/wiki/Representational_state_transfer).
 
-Organizamos nuestros endpoints a partir de un recurso, digamos por ejemplo imágenes, y utilizando el método del protocolo HTTP hacemos las operaciones CRUD sobre ese recurso.
+Hay mucha info de ésto.
 
-GET http://go_rest_controller.com/imagenes
-
-GET http://go_rest_controller.com/imagenes/:id
-
-PUT http://go_rest_controller.com/imagenes/:id
-
-POST http://go_rest_controller.com/imagenes/:id
-
-DELETE http://go_rest_controller.com/imagenes/:id
-
-### Use Case Centric
+#### Use Case Centric
 
 El formato RestFul no es util cuando tenemos múltiples casos de uso sobre un recurso, por ejemplo una factura, podemos necesitar hacer diversas consultas y diversas acciones sobre la misma. Por lo que es conveniente definir el protocolo en base a casos de uso.
 
-Existen varias formas de hacerlo, una forma simple y efectiva, es :
+De esto si que no hay un estándar. Existen varias formas de hacerlo, una forma simple y efectiva, es :
 
 - Utilizamos GET para consultar (queries)
 - Utilizamos POST para cambiar el estados (commands)
@@ -140,6 +132,16 @@ POST http://go_rest_controller.com/facturas/:id/enviar_correo
 POST http://go_rest_controller.com/facturas/:id/pagar
 
 POST http://go_rest_controller.com/facturas/:id/cancelar
+
+## Recursos
+
+[Introducing the RMR Web Architecture](https://www.peej.co.uk/articles/rmr-architecture.html)
+
+[Chapter 4. The Resource-Oriented Architecture](https://www.oreilly.com/library/view/restful-web-services/9780596529260/ch04.html)
+
+[Modelo–vista–controlador](https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador)
+
+[REST Resource Naming Guide](https://restfulapi.net/resource-naming/)
 
 ## Nota
 
