@@ -1,3 +1,5 @@
+[English Version](https://github.com/nmarsollier/go_rest_controller/blob/main/README_en.md)
+
 # REST Controllers en go
 
 Este repositorio plantea una forma simple y efectiva de organizar nuestros servicios REST en un entorno de microservicios.
@@ -147,4 +149,4 @@ POST http://go_rest_controller.com/facturas/:id/cancelar
 
 Esta es una serie de notas sobre patrones simples de programación en GO.
 
-[Tabla de Contenidos](https://github.com/nmarsollier/go_index)
+[Tabla de Contenidos](https://github.com/nmarsollier/go_index/blob/main/README.md)
