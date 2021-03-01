@@ -1,10 +1,10 @@
-package controllers
+package routes
 
 import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/nmarsollier/go_rest_controller/service"
+	"github.com/nmarsollier/go_rest_controller/model/hello/service"
 )
 
 // Internal configure ping/pong service
