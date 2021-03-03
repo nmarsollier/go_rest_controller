@@ -14,7 +14,7 @@ Each file contains a single route definition, only one entry and all the code th
 
 File names represent HTTP Rest entries very clear :
 
-```
+```go
  - controllers
        get_hello_username.go
        get_ping.go
@@ -23,7 +23,7 @@ File names represent HTTP Rest entries very clear :
 
 Where rest.go contains the framework initialization only. 
 
-```
+```go
 func Start() {
 	getRouter().Run(":8080")
 }
@@ -41,7 +41,7 @@ func getRouter() *gin.Engine {
 
 We have a single file for each rest entry (get_resource, put_resource, get_resources_id, etc) each one handles the single request.
 
-```
+```go
 // Internal configure ping/pong service
 func init() {
 	getRouter().GET("/ping", pingHandler)

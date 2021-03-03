@@ -14,7 +14,7 @@ Estructuramos los directorios del controller en base a eso
 Los nombres del archivo hacen referencia a la entrada http
 
 Por consiguiente tenemos la estructura :
-```
+```go
  - controllers
        get_hello_username.go
        get_ping.go
@@ -23,7 +23,7 @@ Por consiguiente tenemos la estructura :
 
 Donde rest.go contiene la inicialización del framework, pero no las rutas. 
 
-```
+```go
 func Start() {
 	getRouter().Run(":8080")
 }
@@ -43,7 +43,7 @@ Tenemos un archivo por método Rest (get_resource, put_resource, get_resources_i
 
 En estos archivos definimos todo lo que tenga que ver con esa ruta desde la definición de la misma hasta la implementación del controller.
 
-```
+```go
 // Internal configure ping/pong service
 func init() {
 	getRouter().GET("/ping", pingHandler)
